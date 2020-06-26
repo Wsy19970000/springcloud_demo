@@ -1,0 +1,23 @@
+#配置服务器端口号
+server:
+  port: 8083
+#服务名
+spring:
+  application:
+    name: banner-Consumer
+  devtools:
+    restart:
+      exclude: static/**,pages/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+
+
+
+
+
+
+
+

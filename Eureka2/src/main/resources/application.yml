@@ -1,0 +1,13 @@
+#配置tomcat端口号
+server:
+ port: 10086
+
+#配置服务名
+spring:
+  application:
+    name: Eureka1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10010/eureka

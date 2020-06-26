@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Eureka1" />
+        <module name="Eureka2" />
+        <module name="hb-admin" />
+        <module name="hb-commons" />
+        <module name="hb-pojo" />
+        <module name="hb-web" />
+        <module name="hb-web-banner-consumer" />
+        <module name="hb-web-banner-provider1" />
+        <module name="hb-web-banner-provider2" />
+        <module name="hb-web-hot-provider" />
+        <module name="hb-web-order-provider" />
+        <module name="hb-web-secKill-provider" />
+        <module name="hb-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hb-zuulA" target="1.8" />
+      <module name="hb-zuulB" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Eureka1" options="-parameters" />
+      <module name="Eureka2" options="-parameters" />
+      <module name="hb-admin" options="-parameters" />
+      <module name="hb-commons" options="-parameters" />
+      <module name="hb-pojo" options="-parameters" />
+      <module name="hb-web" options="-parameters" />
+      <module name="hb-web-banner-consumer" options="-parameters" />
+      <module name="hb-web-banner-provider1" options="-parameters" />
+      <module name="hb-web-banner-provider2" options="-parameters" />
+      <module name="hb-web-hot-provider" options="-parameters" />
+      <module name="hb-web-order-provider" options="-parameters" />
+      <module name="hb-web-secKill-provider" options="-parameters" />
+      <module name="hb-zuul" options="-parameters" />
+      <module name="hb-zuulA" options="-parameters" />
+      <module name="hb-zuulB" options="-parameters" />
+    </option>
+  </component>
+</project>
