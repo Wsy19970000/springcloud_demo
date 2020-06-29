@@ -21,11 +21,17 @@ import java.util.concurrent.TimeUnit;
 public class IndexController {
     @Autowired
     private NavServiceImpl navService;
+    @Autowired
+    private RestTemplate restTemplate;
 
     @RequestMapping("/")
     public String getHxNavs(Model model){
         List<Map<String, Object>> hxNavs = navService.getHxNavs();
+        //通过rest调用其它服务
+        List bannaerList = restTemplate.getForObject("http://banner-Consumer/banner_consumer/getBannersByConsumer", List.class);
         model.addAttribute("hxNavs",hxNavs);
+        model.addAttribute("bannerList",bannaerList);
+       // bannaerList.forEach(temp-> System.out.println(temp));
         return "Index.jsp";
     }
 

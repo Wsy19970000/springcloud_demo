@@ -477,9 +477,16 @@
         <div class="banner">
             <div class="top_slide_wrap">
                 <ul class="slide_box bxslider">
+                    <c:forEach var="map" items="${bannerList}">
+                        <a href="${map.href}">
+                            <li>
+                                <img src="${map.imgUrl}" width="740" height="401" />
+                            </li>
+                        </a>
+                    </c:forEach>
+                    <%--<li><img src="<%=basePath %>/static/images/ban1.jpg" width="740" height="401" /></li>
                     <li><img src="<%=basePath %>/static/images/ban1.jpg" width="740" height="401" /></li>
-                    <li><img src="<%=basePath %>/static/images/ban1.jpg" width="740" height="401" /></li>
-                    <li><img src="<%=basePath %>/static/images/ban1.jpg" width="740" height="401" /></li>
+                    <li><img src="<%=basePath %>/static/images/ban1.jpg" width="740" height="401" /></li>--%>
                 </ul>
                 <div class="op_btns clearfix">
                     <a href="#" class="op_btn op_prev"><span></span></a>
