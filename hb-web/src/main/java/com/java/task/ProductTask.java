@@ -23,7 +23,7 @@ public class ProductTask {
     private Configuration config;
 
 
-    @Scheduled(cron = "* * 0/12 * * *")  //秒分时 日月年
+    @Scheduled(cron = "* * 12 * * *")  //秒分时 日月年
     public void getHtmlByFtl(){
         try {
             System.out.println("---------");

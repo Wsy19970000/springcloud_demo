@@ -29,8 +29,10 @@ public class IndexController {
         List<Map<String, Object>> hxNavs = navService.getHxNavs();
         //通过rest调用其它服务
         List bannaerList = restTemplate.getForObject("http://banner-Consumer/banner_consumer/getBannersByConsumer", List.class);
+        List hotList = restTemplate.getForObject("http://hotProvider/hot/getHotProducts", List.class);
         model.addAttribute("hxNavs",hxNavs);
         model.addAttribute("bannerList",bannaerList);
+        model.addAttribute("hotList",hotList);
        // bannaerList.forEach(temp-> System.out.println(temp));
         return "Index.jsp";
     }

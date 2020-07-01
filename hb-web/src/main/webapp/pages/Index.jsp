@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/";
+    String produtctDetailPath = "http://localhost:6060/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -559,7 +560,28 @@
                     <div id="block">
                         <div id="botton-scroll">
                             <ul class="featureUL">
-                                <li class="featureBox">
+                                <c:forEach items="${hotList}" var="map">
+                                    <li class="featureBox">
+                                        <div class="box">
+                                            <div class="h_icon"><img src="<%=basePath %>/static/images/hot.png" width="50" height="50" /></div>
+                                            <div class="imgbg">
+                                                <a href="<%=produtctDetailPath%>${map.href}">
+                                                    <img src="${map.imgUrl}" width="160" height="136" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="<%=produtctDetailPath%>${map.href}">
+                                                    <h2>${map.title}</h2>
+                                                        ${map.subTitle}
+                                                </a>
+                                            </div>
+                                            <div class="price">
+                                                <font>￥<span>${map.price}</span></font> &nbsp;
+                                            </div>
+                                        </div>
+                                    </li>
+                                </c:forEach>
+                                <%--<li class="featureBox">
                                     <div class="box">
                                         <div class="h_icon"><img src="<%=basePath %>/static/images/hot.png" width="50" height="50" /></div>
                                         <div class="imgbg">
@@ -626,7 +648,7 @@
                                             <font>￥<span>280</span></font> &nbsp; 30R
                                         </div>
                                     </div>
-                                </li>
+                                </li>--%>
                             </ul>
                         </div>
                     </div>
