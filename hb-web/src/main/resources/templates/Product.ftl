@@ -766,7 +766,7 @@
                         //点击评论按钮，请求后台从mongodb中获取评论信息
                         jQuery("#discuss").click(function(){
                             jQuery.ajax({
-                                url:"http://localhost:8083/discuss/getDiscuss",
+                                url:"http://localhost:8082/discuss/getDiscuss",
                                 type:"POST",
                                 dataType:"JSON",
                                 success:function(rs){

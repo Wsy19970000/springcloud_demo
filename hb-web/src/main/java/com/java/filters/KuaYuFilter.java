@@ -15,7 +15,7 @@ public class KuaYuFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
         //允许跨域访问
-        response.setHeader("Access-Control-Allow-Origin", "*"); // 设置允许所有跨域访问
+        response.setHeader("Access-Control-Allow-Origin", "*"); // 设置允许所有跨域访问,可以设置具体IP
         response.setHeader("Access-Control-Allow-Methods", "POST,GET,PUT,OPTIONS,DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
         response.setHeader("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,Authorization,token");

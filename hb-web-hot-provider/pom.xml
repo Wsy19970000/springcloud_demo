@@ -72,8 +72,8 @@
 
         <!--引入hb-commons模块-->
         <dependency>
-            <artifactId>springcloud_demo1</artifactId>
-            <groupId>com.java.springcloud_demo1</groupId>
+            <artifactId>hb-commons</artifactId>
+            <groupId>com.java.hb-commons</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

@@ -80,8 +80,8 @@
 
         <!--引入hb-commons模块-->
         <dependency>
-            <groupId>com.java.hb-commons</groupId>
             <artifactId>hb-commons</artifactId>
+            <groupId>com.java.hb-commons</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
